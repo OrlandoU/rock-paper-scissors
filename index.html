@@ -2,12 +2,36 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <script src="index.js"></script>
+        <script src="index.js" defer></script>
+        <link rel="stylesheet" href="style.css">
         <title>Rock, Paper and Scissors</title>
     </head>
 
     <body>
-        
+        <div class="header-container">  
+           <div class="scoreboard">
+               <div class="title">ROCK PAPER SCISSORS</div>
+               <div class="counter">
+                   <div class="counterScore">SCORE</div>
+                   <div class="currentScore">0</div>
+               </div>
+           </div>
+        </div> 
+        <div class="result"></div>
+        <div class="selectionContainer">
+            <div class="selection" data-option="rock">
+                <img src="https://i.pinimg.com/originals/0b/f8/65/0bf86500606c70948ee423e23eee2e32.jpg" alt="rock drawing"> <br>
+                Rock 
+            </div>
+            <div class="selection" data-option="paper"> 
+                <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX7543356.jpg" alt="paper drawing"> <br>
+                Paper
+            </div>
+            <div class="selection" data-option="scissors">
+                <img src="https://www.kindpng.com/picc/m/43-437114_line-art-tool-hair-shear-old-scissors-drawing.png" alt="scissors drawing"> <br>
+                Scissors
+            </div>
+        </div>    
     </body>
 
 </html>

@@ -4,15 +4,17 @@ function computerPlay(){
 }
 
 function playRound(playerSelection, cpuSelection){
-
     let player = playerSelection.toLowerCase();
     let computer = cpuSelection.toLowerCase();
+    let counterBoard = document.querySelector('.currentScore')
 
     if(player == 'rock'){
         if (computer == 'paper'){
             return "You Lose! Paper beats Rock"
         }
         else if(computer == 'scissors'){
+            counter++
+            counterBoard.textContent = counter
             return "You Won! Rock beats Scissors"
         }
         else{
@@ -24,6 +26,8 @@ function playRound(playerSelection, cpuSelection){
             return "You Lose! Scissors beats Paper"
         }
         else if(computer == 'rock'){
+            counter++
+            counterBoard.textContent = counter
             return "You Won! Paper beats Rock"
         }
         else{
@@ -35,6 +39,8 @@ function playRound(playerSelection, cpuSelection){
             return "You Lose! Rock beats Scissors"
         }
         else if(computer == 'paper'){
+            counter++
+            counterBoard.textContent = counter
             return "You Won! Scissor beats Paper"
         }
         else{
@@ -42,14 +48,21 @@ function playRound(playerSelection, cpuSelection){
         }
     }
 }
+function restartGame(){
+
+}
 
 function game(){
-    for(let i = 0;i<5;i++){
-        let computerSelection = computerPlay();
-        let userSelection = prompt("You choose?");
-        
-        console.log(playRound(userSelection,computerSelection))
-    }
+    let computerSelection = computerPlay();
+    let userSelection = this.dataset.option
+    document.querySelector('.result').textContent = (playRound(userSelection,computerSelection));
+    this.addEventListener('transitionend', removeClass) 
+    this.classList.add('onclicky')
 }
-game()
+function removeClass(e){
+    this.classList.remove('onclicky')
+}
+let counter = 0;
+const options = document.querySelectorAll('.selection');
+options.forEach(option=>option.addEventListener('click',game))
 
